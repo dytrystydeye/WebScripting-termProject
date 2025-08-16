@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Bakery - Menu</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+       <h1>My Bakery</h1>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="gallery.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+        <!-- This section contains the image carousel created by Slick Slider. -->
+    <h1 class="text-center mb-4">Our Menu</h1>
+
+    <!-- Slider for Menu Images -->
+    <section class="slider my-5">
+      <div><img src="images/gallery/alexandra-gornago-YjadnXdoa6s-unsplash.jpg" alt="many desserts" class="img-fluid" data-bs-toggle="tooltip" title="Assorted Goods"></div>
+      <div><img src="images/gallery/estudio-bloom-B4LfDN2vMGg-unsplash (1).jpg" alt="lemon tarts" class="img-fluid" data-bs-toggle="tooltip" title="Lemon squares"></div>
+      <div><img src="images/gallery/geri-chapple-fXdoHjQ2Pyg-unsplash (1).jpg" alt="lots of strudels" class="img-fluid" data-bs-toggle="tooltip" title="Strudles"></div>
+      <div><img src="images/gallery/irina-jKh453Idils-unsplash.jpg" alt="Cupcake 1" class="berry dessert" data-bs-toggle="tooltip" title="Berry Pie"></div>
+      <div><img src="images/gallery/juliane-amimer-sa9TyJWs34M-unsplash.jpg" alt="brown cookies" class="img-fluid" data-bs-toggle="tooltip" title="Almond Cookie"></div>
+      <div><img src="images/gallery/mockup-graphics-OdE9bKLNhQs-unsplash.jpg" alt="berry desserts" class="img-fluid" data-bs-toggle="tooltip" title="Strawberry square"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Your Bakery. All rights reserved.</p>
+  </footer>
+
+      <!-- display copy right information  -->
+
+
+<!-- Scripts -->
+     <!-- Link to jQuery library and is required for Slick SLider and BootStrap-->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- Link to boot strap-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- Link to carousel -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      // Slick Slider
+      $('.slider').slick({
+        autoplay: true,
+        dots: true,
+        arrows: true
+      });
+
+      // Bootstrap Tooltips for menu images
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      });
+
+    });
+  </script>
+</body>
+</html>

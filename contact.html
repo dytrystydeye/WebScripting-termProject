@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Bakery - Contact</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+
+  <header>
+        <!-- The nav tag contains the navigation links. -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+       <h1>My Bakery</h1>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="gallery.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+    </nav>
+  </header>
+  <!-- Main Content -->
+  <main class="container">
+        <!-- Main heading for the page. "text-center" is a Bootstrap class to center the text. -->
+
+    <h1 class="text-center">Contact Us</h1>
+
+        <!-- The form for user input. "mx-auto" and the style attribute are used to center the form and limit its width. -->
+    <form id="contactForm" class="mx-auto" style="max-width:500px;">
+            <!-- Form group for the name input. "mb-3" adds a margin to the bottom. -->
+      <div class="mb-3">
+                <!-- The label for the input field. The "for" attribute links it to the input's "id". -->
+        <label for="name" class="form-label">Name</label>
+                <!-- The text input field for the name. "form-control" styles it according to Bootstrap. -->
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+
+            <!-- Form group for the email input. -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+                <!-- The textarea for longer messages. "rows" sets the default height. -->
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+      </div>
+
+            <!-- The submit button for the form. "btn btn-primary" are Bootstrap classes for styling. -->
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-light">
+    <p>&copy; 2025 Your Bakery. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      // jQuery Validate
+      $("#contactForm").validate({
+        rules: {
+          name: "required",
+          email: { required: true, email: true },
+          message: "required"
+        },
+        messages: {
+          name: "Please enter your name",
+          email: "Please enter a valid email",
+          message: "Please write your message"
+        }
+      });
+
+    });
+  </script>
+</body>
+</html>
+
+      <!-- Kyle Lam -->
+             <!-- A01293558 -->
+
